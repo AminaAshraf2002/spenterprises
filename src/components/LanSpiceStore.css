@@ -1,0 +1,396 @@
+/* LanSpiceStore Component Styles */
+
+.lanspice-store {
+  background-color: var(--color-bg-page);
+  border-top: 1px solid var(--color-border);
+  overflow-x: clip;
+}
+
+.lanspice-store__banner {
+  background: linear-gradient(135deg, #ffffff 0%, #f6f8f2 100%);
+  border: 1.5px solid var(--color-primary-border);
+  border-radius: 24px;
+  padding: 1.75rem 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+  box-shadow: 0 10px 30px rgba(45, 68, 38, 0.08);
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  overflow: visible; /* lets mockup overlap outside card */
+}
+
+@media (max-width: 1200px) {
+  .lanspice-store__mockup-link {
+    width: 125%;
+    margin-right: -3.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .lanspice-store__banner {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+    overflow: hidden;
+  }
+
+  .lanspice-store__mockup-wrap {
+    justify-content: center;
+  }
+
+  .lanspice-store__mockup-link {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+.lanspice-store__banner-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.lanspice-store__brand-top {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.lanspice-store__brand-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.08));
+  transition: transform 0.3s ease;
+}
+
+.lanspice-store__brand-logo:hover {
+  transform: scale(1.05);
+}
+
+.lanspice-store__brand-top .lanspice-store__badge {
+  margin-bottom: 0;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.74rem;
+}
+
+.lanspice-store__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--color-primary-soft);
+  color: #5A8139;
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.lanspice-store__headline {
+  font-family: var(--font-heading);
+  font-size: 2.15rem;
+  color: #1e2819;
+  margin-bottom: 0.15rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.lanspice-store__tagline {
+  font-size: 1.02rem;
+  color: #5A8139;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+
+.lanspice-store__body {
+  color: var(--color-text-body);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  max-width: 500px;
+}
+
+.lanspice-store__features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0.75rem 0 1.15rem 0;
+}
+
+.lanspice-store__feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--color-text-title);
+  font-weight: 600;
+}
+
+.lanspice-store__feature-icon {
+  color: #5A8139;
+  font-size: 0.88rem;
+  flex-shrink: 0;
+}
+
+.lanspice-store__banner-cta-wrap {
+  display: flex;
+  margin-top: 0.25rem;
+}
+
+.lanspice-store__banner-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.48rem 1.2rem !important;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 3px 10px rgba(90, 129, 57, 0.22);
+  transition: all 0.25s ease;
+  width: fit-content;
+}
+
+.lanspice-store__banner-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(90, 129, 57, 0.32);
+}
+
+.lanspice-store__banner-cta svg {
+  font-size: 0.72rem;
+}
+
+/* web.png Mockup Styling — Overlapping outside the card */
+.lanspice-store__mockup-wrap {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.lanspice-store__mockup-link {
+  display: block;
+  position: relative;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease;
+  width: 140%;
+  max-width: 620px;
+  margin-right: -7rem;
+  margin-top: -3.5rem;
+  margin-bottom: -3.5rem;
+  z-index: 5;
+}
+
+.lanspice-store__mockup-link:hover {
+  transform: translateY(-8px) scale(1.02);
+  filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.22));
+}
+
+.lanspice-store__mockup-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.18));
+  transition: transform 0.4s ease;
+}
+
+.lanspice-store__mockup-badge {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  color: #3D5A2B;
+  border: 1px solid rgba(90, 129, 57, 0.3);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.38rem 0.9rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  z-index: 6;
+}
+
+.lanspice-store__section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.lanspice-store__eyebrow-icon {
+  font-size: 0.8rem;
+}
+
+.lanspice-store__section-desc {
+  margin: 0 auto;
+}
+
+.lanspice-store__products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+/* Strictly 3 columns (one row) on home page */
+.lanspice-store__products-grid--home {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 991px) {
+  .lanspice-store__products-grid--home {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+.lanspice-store__product-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.lanspice-store__product-image-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #f6f8f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lanspice-store__product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.lanspice-store__product-image:hover {
+  transform: scale(1.05);
+}
+
+.lanspice-store__product-category {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #5A8139;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-primary-border);
+}
+
+.lanspice-store__product-weight {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  background: #5A8139;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+}
+
+.lanspice-store__product-body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.lanspice-store__product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+}
+
+.lanspice-store__product-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-text-title);
+  font-weight: 600;
+}
+
+.lanspice-store__product-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #5A8139;
+}
+
+.lanspice-store__product-desc {
+  font-size: 0.86rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.lanspice-store__product-cta {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.82rem;
+  padding: 0.65rem;
+}
+
+.lanspice-store__product-cta-icon {
+  font-size: 0.72rem;
+}
+
+/* Home Page View More Button */
+.lanspice-store__view-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.lanspice-store__view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #5B6E4E;
+  color: #ffffff;
+  padding: 0.4rem 0.5rem 0.4rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(91, 110, 78, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lanspice-store__view-more-btn:hover {
+  background-color: #4C5E3F;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(91, 110, 78, 0.35);
+}
+
+.lanspice-store__view-more-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #5B6E4E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  transition: transform 0.25s ease;
+}
+
+.lanspice-store__view-more-btn:hover .lanspice-store__view-more-icon {
+  transform: translateX(3px);
+}

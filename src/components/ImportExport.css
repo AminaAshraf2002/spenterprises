@@ -1,0 +1,624 @@
+/* ImportExport Component Styles - Bespoke Editorial Agro Export Layout */
+
+.import-export {
+  background-color: #FAF8F5;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 5.5rem 0;
+  position: relative;
+}
+
+/* 2-Column Hero Grid: Left Content / Right 2x2 Cards */
+.import-export__hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Left Column */
+.import-export__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Overline with Horizontal Line */
+.import-export__overline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6C7A63;
+  margin-bottom: 1.25rem;
+}
+
+.import-export__overline-line {
+  display: inline-block;
+  width: 44px;
+  height: 1.5px;
+  background-color: #6C7A63;
+  opacity: 0.6;
+}
+
+/* Headline */
+.import-export__headline {
+  font-family: var(--font-heading);
+  font-size: clamp(2.1rem, 3.4vw, 2.85rem);
+  font-weight: 600;
+  color: #1F271B;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* Description */
+.import-export__description {
+  font-size: 0.98rem;
+  color: #55604F;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+/* Olive Green Pill Button with Circular Icon Container */
+.import-export__pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: #5B6E4E;
+  color: #ffffff;
+  padding: 0.7rem 0.9rem 0.7rem 1.75rem;
+  border-radius: 9999px;
+  font-size: 0.94rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(91, 110, 78, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.import-export__pill-btn:hover {
+  background-color: #4C5E3F;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(91, 110, 78, 0.35);
+}
+
+.import-export__pill-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #5B6E4E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+.import-export__pill-btn:hover .import-export__pill-icon {
+  transform: translateX(3px);
+}
+
+/* Bottom Leaf Badge Card */
+.import-export__leaf-card {
+  margin-top: 2.75rem;
+  background: #ffffff;
+  border: 1px solid rgba(91, 110, 78, 0.16);
+  border-radius: 18px;
+  padding: 0.9rem 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  max-width: 420px;
+}
+
+.import-export__leaf-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #EFF4EB;
+  color: #5B6E4E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.import-export__leaf-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.import-export__leaf-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #20281B;
+  margin-bottom: 0.15rem;
+}
+
+.import-export__leaf-sub {
+  font-size: 0.77rem;
+  color: #727D6C;
+  line-height: 1.35;
+}
+
+/* Right Column: 2x2 Grid of Cards */
+.import-export__right {
+  width: 100%;
+}
+
+.import-export__cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.35rem;
+}
+
+/* Individual Feature Card */
+.import-export__card {
+  background: #FAF7F2;
+  border-radius: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  min-height: 290px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.import-export__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+.import-export__card-top {
+  padding: 1.5rem 1.4rem 0.5rem 1.4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.import-export__card-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #E8ECE3;
+  color: #5B6E4E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.import-export__card-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1F241E;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.import-export__card-desc {
+  font-size: 0.8rem;
+  color: #65715E;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Image Wrap with Gradient Blend at Top */
+.import-export__card-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+.import-export__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.import-export__card-blend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    #FAF7F2 0%,
+    rgba(250, 247, 242, 0.82) 20%,
+    rgba(250, 247, 242, 0.25) 55%,
+    transparent 100%
+  );
+}
+
+/* =======================================================
+   GSAP PARALLAX BANNER STYLES (FULL CONTAINER WIDTH)
+   ======================================================= */
+
+.import-export__parallax-banner {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);          /* breaks out of the container, centered on the page */
+  width: min(1800px, calc(100vw - 3rem));
+  max-width: none;
+  margin: 3.5rem 0 3rem 0;
+  min-height: 400px;
+  padding: 3.5rem 3rem;
+  display: grid;                        /* guarantees true centering */
+  place-items: center;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(18, 30, 15, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+/* Scrubbing Background Landscape */
+.import-export__parallax-bg {
+  position: absolute;
+  top: -25%;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Multi-stop Overlay */
+.import-export__parallax-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    135deg,
+    rgba(14, 25, 12, 0.91) 0%,
+    rgba(26, 46, 22, 0.74) 48%,
+    rgba(12, 22, 10, 0.89) 100%
+  );
+  backdrop-filter: blur(1px);
+}
+
+/* Safety net: leftover badge markup in JSX won't affect layout */
+.import-export__float-badge {
+  display: none !important;
+}
+
+/* Banner Content */
+.import-export__parallax-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.import-export__banner-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(91, 110, 78, 0.38);
+  border: 1px solid rgba(175, 215, 150, 0.35);
+  border-radius: 9999px;
+  padding: 0.25rem 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #DCF2D0;
+  margin-bottom: 0.75rem;
+}
+
+.import-export__banner-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ADE80;
+  box-shadow: 0 0 8px #4ADE80;
+  animation: bannerPulse 2s infinite ease-in-out;
+}
+
+@keyframes bannerPulse {
+  0% { transform: scale(0.9); opacity: 0.8; box-shadow: 0 0 4px #4ADE80; }
+  50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 10px #4ADE80; }
+  100% { transform: scale(0.9); opacity: 0.8; box-shadow: 0 0 4px #4ADE80; }
+}
+
+.import-export__banner-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.import-export__banner-title-highlight {
+  color: #D4EDB8;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.import-export__banner-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(240, 246, 236, 0.92);
+  max-width: 760px;
+  margin-bottom: 1.25rem;
+}
+
+/* Glassmorphism Metric Highlights */
+.import-export__banner-metrics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  padding: 0.6rem 1.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.import-export__banner-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.import-export__banner-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.import-export__banner-metric-val {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #E7F6D5;
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  margin-bottom: 0.1rem;
+}
+
+.import-export__banner-metric-label {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 500;
+}
+
+/* Action Area */
+.import-export__banner-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.import-export__banner-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #627A52;
+  color: #ffffff;
+  padding: 0.65rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.import-export__banner-cta:hover {
+  background: #739061;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(115, 144, 97, 0.4);
+}
+
+.import-export__banner-note {
+  font-size: 0.73rem;
+  color: rgba(225, 235, 218, 0.78);
+  letter-spacing: 0.01em;
+}
+
+
+/* Categories Section Below */
+.import-export__categories-section {
+  margin-top: 1rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+
+.import-export__categories-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.import-export__categories-title {
+  font-size: 1.85rem;
+  color: #1F271B;
+}
+
+.import-export__categories-desc {
+  margin: 0 auto;
+  color: #55604F;
+}
+
+.import-export__categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.25rem;
+}
+
+.import-export__category-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.import-export__category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.import-export__category-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #EFF4EB;
+  color: #5B6E4E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.import-export__category-icon {
+  font-size: 1.1rem;
+}
+
+.import-export__category-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: #1F241E;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.import-export__category-subtitle {
+  font-size: 0.76rem;
+  color: #5B6E4E;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.import-export__category-desc {
+  font-size: 0.82rem;
+  color: #65715E;
+  line-height: 1.5;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.import-export__category-link {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #5B6E4E;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.import-export__category-link-icon {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.import-export__category-card:hover .import-export__category-link-icon {
+  transform: translateX(3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .import-export__hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .import-export__left {
+    max-width: 100%;
+  }
+
+  .import-export__description {
+    max-width: 100%;
+  }
+
+  .import-export__parallax-banner {
+    left: 0;
+    transform: none;
+    width: 100%;
+    padding: 2.25rem 1.5rem;
+    min-height: auto;
+    margin: 2.5rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .import-export {
+    padding: 3.5rem 0;
+  }
+
+  .import-export__cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .import-export__leaf-card {
+    max-width: 100%;
+  }
+
+  .import-export__parallax-banner {
+    padding: 1.75rem 1.15rem;
+    border-radius: 18px;
+    margin: 2rem 0;
+  }
+
+  .import-export__banner-title {
+    font-size: 1.65rem;
+  }
+
+  .import-export__banner-text {
+    font-size: 0.92rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .import-export__banner-metrics {
+    flex-direction: column;
+    gap: 0.85rem;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .import-export__banner-divider {
+    display: none;
+  }
+
+  .import-export__banner-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,6 @@
+# https://exportssp.com/ robots.txt
+User-agent: *
+Allow: /
+
+# Canonical Sitemap
+Sitemap: https://exportssp.com/sitemap.xml

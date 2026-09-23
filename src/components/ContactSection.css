@@ -1,0 +1,340 @@
+/* ContactSection Component Styles */
+
+.contact-section {
+  background-color: #ffffff;
+  padding-top: 3rem;
+}
+
+.contact-section__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact-section__left-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--color-text-title);
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+}
+
+.contact-section__left-desc {
+  color: var(--color-text-body);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 0.94rem;
+}
+
+.contact-section__info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.contact-section__info-card {
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-section__info-icon-wrap {
+  padding: 0.65rem;
+  border-radius: 10px;
+  background: var(--color-primary-soft);
+  color: #5A8139;
+  flex-shrink: 0;
+}
+
+.contact-section__info-icon {
+  font-size: 1.1rem;
+}
+
+.contact-section__info-title {
+  font-size: 0.94rem;
+  color: var(--color-text-title);
+  margin-bottom: 0.25rem;
+}
+
+.contact-section__info-text {
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.contact-section__phone-title {
+  font-size: 0.94rem;
+  color: var(--color-text-title);
+  margin-bottom: 0.35rem;
+}
+
+.contact-section__phones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contact-section__phone-link {
+  font-size: 0.86rem;
+  color: #5A8139;
+  font-weight: 600;
+}
+
+.contact-section__quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.contact-section__email-card {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact-section__email-icon {
+  color: #5A8139;
+  font-size: 1.2rem;
+}
+
+.contact-section__email-label {
+  font-size: 0.72rem;
+  color: var(--color-text-light);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-section__email-value {
+  font-size: 0.86rem;
+  color: var(--color-text-title);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.contact-section__whatsapp-card {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact-section__whatsapp-icon {
+  color: #5A8139;
+  font-size: 1.2rem;
+}
+
+.contact-section__whatsapp-label {
+  font-size: 0.72rem;
+  color: var(--color-text-light);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-section__whatsapp-value {
+  font-size: 0.86rem;
+  color: var(--color-text-title);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.contact-section__sla {
+  background: var(--color-primary-soft);
+  border: 1px solid var(--color-primary-border);
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-section__sla-icon {
+  color: #5A8139;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.contact-section__sla-text {
+  font-size: 0.82rem;
+  color: #334d1f;
+}
+
+.contact-section__form-card {
+  padding: 2.25rem;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Success State */
+.contact-section__success {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.contact-section__success-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: #5A8139;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+  font-size: 1.5rem;
+}
+
+.contact-section__success-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--color-text-title);
+  margin-bottom: 0.35rem;
+}
+
+.contact-section__success-desc {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.contact-section__quote-box {
+  background: var(--color-bg-page);
+  border: 1px dashed var(--color-primary);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-section__quote-label {
+  font-size: 0.72rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.contact-section__quote-id {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-text-title);
+  letter-spacing: 0.05em;
+}
+
+.contact-section__copy-btn {
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid var(--color-border);
+}
+
+.contact-section__copy-btn--default {
+  background: #ffffff;
+  color: #5A8139;
+}
+
+.contact-section__copy-btn--copied {
+  background: #5A8139;
+  color: #ffffff;
+}
+
+.contact-section__wa-forward {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 0.94rem;
+  margin-bottom: 1rem;
+}
+
+.contact-section__reset-link {
+  font-size: 0.82rem;
+  color: #5A8139;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+}
+
+/* Form */
+.contact-section__form-header {
+  margin-bottom: 1.5rem;
+}
+
+.contact-section__form-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-text-title);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.contact-section__form-subtitle {
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+}
+
+.contact-section__form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.contact-section__form-group {
+  margin-bottom: 0.85rem;
+}
+
+.contact-section__form-group--last {
+  margin-bottom: 1.25rem;
+}
+
+.contact-section__label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-title);
+  margin-bottom: 0.3rem;
+}
+
+.contact-section__input,
+.contact-section__select,
+.contact-section__textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-border);
+  font-family: inherit;
+  font-size: 0.88rem;
+  outline: none;
+}
+
+.contact-section__input:focus,
+.contact-section__select:focus,
+.contact-section__textarea:focus {
+  border-color: #5A8139;
+}
+
+.contact-section__select {
+  background: #ffffff;
+}
+
+.contact-section__textarea {
+  resize: vertical;
+}
+
+.contact-section__submit {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 0.94rem;
+}
+
+.contact-section__submit-icon {
+  font-size: 0.85rem;
+}
