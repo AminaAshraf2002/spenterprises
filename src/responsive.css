@@ -1058,24 +1058,25 @@ img, video, iframe, embed, object {
    ══════════════════════════════════════════════════════════════════════════ */
 
 @media (max-width: 768px) {
-  .contact-section               { padding-top: 1.5rem; padding-bottom: 2.5rem; }
-  .contact-section__grid         { grid-template-columns: 1fr; gap: 1.5rem; }
+  .contact-section               { padding-top: 1.5rem; padding-bottom: 2.5rem; overflow-x: hidden !important; }
+  .contact-section__grid         { grid-template-columns: 1fr !important; gap: 1.5rem !important; width: 100% !important; }
+  .contact-section__grid > div   { min-width: 0 !important; max-width: 100% !important; width: 100% !important; }
   .contact-section__left-title   { font-size: clamp(1.35rem, 5.5vw, 1.7rem); margin-bottom: 0.5rem; }
-  .contact-section__left-desc    { font-size: 0.88rem; line-height: 1.5; margin-bottom: 1.25rem; }
-  .contact-section__info-cards   { gap: 0.85rem; margin-bottom: 1.25rem; }
-  .contact-section__info-card    { padding: 1rem; border-radius: 16px; gap: 0.85rem; }
-  .contact-section__info-icon-wrap { padding: 0.5rem; border-radius: 8px; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; }
+  .contact-section__left-desc    { font-size: 0.88rem; line-height: 1.5; margin-bottom: 1.25rem; max-width: 100% !important; }
+  .contact-section__info-cards   { gap: 0.85rem; margin-bottom: 1.25rem; width: 100% !important; }
+  .contact-section__info-card    { padding: 1rem !important; border-radius: 16px !important; gap: 0.85rem !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
+  .contact-section__info-icon-wrap { padding: 0.5rem; border-radius: 8px; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .contact-section__info-icon    { font-size: 0.95rem; }
   .contact-section__info-title   { font-size: 0.9rem; margin-bottom: 0.15rem; }
-  .contact-section__info-text    { font-size: 0.8rem; line-height: 1.45; }
+  .contact-section__info-text    { font-size: 0.8rem; line-height: 1.45; word-break: break-word; }
   .contact-section__phone-title  { font-size: 0.9rem; margin-bottom: 0.25rem; }
   .contact-section__phone-link   { font-size: 0.82rem; }
-  .contact-section__quick-links  { grid-template-columns: 1fr; gap: 0.75rem; }
-  .contact-section__email-card   { padding: 0.9rem 1rem; border-radius: 14px; flex-direction: row; align-items: center; gap: 0.85rem; }
-  .contact-section__email-icon   { font-size: 1.1rem; }
+  .contact-section__quick-links  { display: grid !important; grid-template-columns: 1fr !important; gap: 0.75rem !important; width: 100% !important; }
+  .contact-section__email-card   { padding: 0.9rem 1rem !important; border-radius: 14px !important; flex-direction: row !important; align-items: center !important; gap: 0.85rem !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
+  .contact-section__email-icon   { font-size: 1.1rem; flex-shrink: 0; }
   .contact-section__email-label  { font-size: 0.68rem; }
-  .contact-section__email-value  { font-size: 0.82rem; }
-  .contact-section__sla         { padding: 0.85rem 1rem; border-radius: 14px; font-size: 0.8rem; }
+  .contact-section__email-value  { font-size: 0.82rem; word-break: break-all; }
+  .contact-section__sla         { padding: 0.85rem 1rem !important; border-radius: 14px !important; font-size: 0.8rem !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
 }
 
 @media (max-width: 600px) {
@@ -1087,7 +1088,7 @@ img, video, iframe, embed, object {
 
 @media (max-width: 480px) {
   .contact-section__form-card {
-    padding: 1.25rem 1rem; border-radius: 18px;
+    padding: 1.25rem 1rem !important; border-radius: 18px !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;
   }
   .contact-section__form-title { font-size: 1.3rem; }
   .contact-section__form-desc  { font-size: 0.82rem; margin-bottom: 1.25rem; }
@@ -1370,10 +1371,15 @@ img, video, iframe, embed, object {
   .gallery-section__note { flex-direction: column; text-align: center; gap: 0.55rem; }
 }
 
-/* About arch bottom row: single column on small phones */
-@media (max-width: 375px) {
+/* About arch bottom row: ALWAYS 2-column side-by-side grid on mobile */
+@media (max-width: 768px) {
   .about-teaser-arch-bottom-row,
-  .about-arch-bottom-row { grid-template-columns: 1fr; gap: 0.75rem; }
+  .about-arch-bottom-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    align-items: start !important;
+  }
 }
 
 
