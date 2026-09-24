@@ -43,6 +43,51 @@ export default function AboutSection({ onNavigate }) {
   const titleWrapperRef = useRef(null);
   const collageRef = useRef(null);
   const botanicalsRef = useRef(null);
+  const cardsScrollRef = useRef(null);
+
+  // Auto-sliding loop for "Why Choose Us" portrait cards on mobile/tablet
+  useEffect(() => {
+    const el = cardsScrollRef.current;
+    if (!el) return;
+
+    let intervalId;
+    const startAutoSlide = () => {
+      intervalId = setInterval(() => {
+        if (!el) return;
+        if (el.scrollWidth > el.clientWidth) {
+          const cardWidth = el.firstElementChild ? el.firstElementChild.offsetWidth + 14 : 240;
+          const maxScroll = el.scrollWidth - el.clientWidth;
+          
+          if (el.scrollLeft >= maxScroll - 15) {
+            el.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            el.scrollBy({ left: cardWidth, behavior: 'smooth' });
+          }
+        }
+      }, 3000);
+    };
+
+    startAutoSlide();
+
+    const pause = () => clearInterval(intervalId);
+    const resume = () => {
+      clearInterval(intervalId);
+      startAutoSlide();
+    };
+
+    el.addEventListener('mouseenter', pause);
+    el.addEventListener('mouseleave', resume);
+    el.addEventListener('touchstart', pause, { passive: true });
+    el.addEventListener('touchend', resume, { passive: true });
+
+    return () => {
+      clearInterval(intervalId);
+      el.removeEventListener('mouseenter', pause);
+      el.removeEventListener('mouseleave', resume);
+      el.removeEventListener('touchstart', pause);
+      el.removeEventListener('touchend', resume);
+    };
+  }, []);
 
   // Toggle between Editorial / Reference Aesthetic and Farm Harvest Aesthetic
   const [aestheticMode, setAestheticMode] = useState('editorial');
@@ -486,7 +531,7 @@ export default function AboutSection({ onNavigate }) {
               </button>
             </div>
 
-            <div className="about-pillars-cards-scroll">
+            <div className="about-pillars-cards-scroll" ref={cardsScrollRef}>
               {harvestPillars.map((pillar) => (
                 <div key={pillar.id} className="about-pillar-portrait-card">
                   <div className="about-pillar-portrait-img-wrap">
@@ -599,14 +644,6 @@ export default function AboutSection({ onNavigate }) {
             </div>
 
             <div className="about-pillars-bottom-right">
-              <div className="about-pillars-bottom-nav">
-                <button type="button" className="about-pillars-nav-btn" aria-label="Previous Route">
-                  <FontAwesomeIcon icon={faChevronLeft} />
-                </button>
-                <button type="button" className="about-pillars-nav-btn" aria-label="Next Route">
-                  <FontAwesomeIcon icon={faChevronRight} />
-                </button>
-              </div>
               <div className="about-pillars-bottom-img-wrap">
                 <img
                   src={heroPng}

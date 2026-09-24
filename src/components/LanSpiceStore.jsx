@@ -154,7 +154,6 @@ export default function LanSpiceStore({ isHomePage = false, onNavigate }) {
                   className="btn btn-outline lanspice-store__product-cta"
                 >
                   <span>Buy on LanSpice.com</span>
-                  <FontAwesomeIcon icon={faExternalLinkAlt} className="lanspice-store__product-cta-icon" />
                 </a>
               </div>
             </div>
@@ -175,6 +174,25 @@ export default function LanSpiceStore({ isHomePage = false, onNavigate }) {
             </button>
           </div>
         )}
+
+        {/* Buy More on LanSpice.com — shown on BOTH home and store pages */}
+        <div className="lanspice-store__buy-more-wrap" data-aos="fade-up">
+          <a
+            href="https://lanspice.com/shop/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="lanspice-store__buy-more-btn"
+          >
+            <span className="lanspice-store__buy-more-icon-wrap">
+              <FontAwesomeIcon icon={faShoppingBag} />
+            </span>
+            <span>Buy More on LanSpice.com</span>
+            <FontAwesomeIcon icon={faExternalLinkAlt} className="lanspice-store__buy-more-ext-icon" />
+          </a>
+          <p className="lanspice-store__buy-more-note">
+            Full catalogue • Secure checkout • Pan-India delivery
+          </p>
+        </div>
       </div>
     </section>
   );

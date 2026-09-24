@@ -2,12 +2,12 @@
 
 .page-hero {
   position: relative;
-  min-height: 64vh;
+  min-height: clamp(380px, 52vh, 580px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 12.5rem;
-  padding-bottom: 6.5rem;
+  padding-top: clamp(10rem, 18vw, 16rem);
+  padding-bottom: clamp(4rem, 8vw, 7.5rem);
   background: #283723;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -15,22 +15,22 @@
 
 @media (max-width: 768px) {
   .page-hero {
-    min-height: 55vh;
-    padding-top: 10rem;
-    padding-bottom: 5rem;
+    min-height: clamp(320px, 44vh, 460px);
+    padding-top: clamp(7.5rem, 16vw, 10.5rem);
+    padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
   }
 }
 
 /* Equalize LanSpice Page Hero Height to Match Other Pages */
 .page-hero--has-logo {
-  padding-top: 10.25rem;
-  padding-bottom: 4.75rem;
+  padding-top: clamp(9rem, 14vw, 13.5rem);
+  padding-bottom: clamp(3.5rem, 6vw, 6rem);
 }
 
 @media (max-width: 768px) {
   .page-hero--has-logo {
-    padding-top: 8.5rem;
-    padding-bottom: 4rem;
+    padding-top: clamp(7rem, 13vw, 9.5rem);
+    padding-bottom: clamp(3rem, 5vw, 4.5rem);
   }
 }
 

@@ -201,7 +201,7 @@ export const LANSPICE_PRODUCTS = [
     weight: "500ml / 1 Liter",
     description: "100% pure cold-pressed virgin coconut oil extracted from fresh sun-dried copra. Rich in authentic aroma and lauric acid.",
     image: oilPng,
-    url: "https://lanspice.com/product/coconut-oil/"
+    url: "https://lanspice.com/product-category/coconut-oil/"
   },
   {
     id: "ls-coffee",
@@ -211,7 +211,7 @@ export const LANSPICE_PRODUCTS = [
     weight: "250g / 500g",
     description: "Finest shade-grown Arabica & Robusta beans handpicked from Western Ghats plantations, slow-roasted for rich aroma and golden crema.",
     image: coffeePng,
-    url: "https://lanspice.com/product/coorg-original-coffee-powder/"
+    url: "https://lanspice.com/product-category/coffee/"
   },
   {
     id: "ls-tea",
@@ -221,7 +221,7 @@ export const LANSPICE_PRODUCTS = [
     weight: "250g / 500g",
     description: "Handpicked tender tea leaves from pristine high-altitude plantations, delivering an invigorating brisk cup with natural freshness.",
     image: teaPng,
-    url: "https://lanspice.com/product/tea/"
+    url: "https://lanspice.com/product-category/tea/"
   },
   {
     id: "ls-cardamom",
@@ -231,7 +231,7 @@ export const LANSPICE_PRODUCTS = [
     weight: "100g / 250g",
     description: "Handpicked from high-altitude Wayanad plantations. Plump, intensely aromatic pods packed with natural volatile essential oils.",
     image: cardmonPng,
-    url: "https://lanspice.com/product/cardamom-seeds-500/"
+    url: "https://lanspice.com/product-category/spices/"
   },
   {
     id: "ls-kashmiri-chilli",
@@ -241,7 +241,7 @@ export const LANSPICE_PRODUCTS = [
     weight: "250g / 500g",
     description: "Vibrant deep natural crimson colour with mild gentle heat, finely stone ground without artificial colours or adulterants.",
     image: kasmmiriPng,
-    url: "https://lanspice.com/product/kashmiri-chilli-powder/"
+    url: "https://lanspice.com/product-category/spice-powders/"
   },
   {
     id: "ls-banana-chips",
@@ -251,7 +251,7 @@ export const LANSPICE_PRODUCTS = [
     weight: "200g / 400g",
     description: "Fresh authentic raw Nendran bananas thinly sliced and crisped in pure cold-pressed coconut oil, seasoned with natural sea salt.",
     image: bananaPng,
-    url: "https://lanspice.com/product/nendran-banana-powder/"
+    url: "https://lanspice.com/product-category/nendran-banana-powder/"
   }
 ];
 

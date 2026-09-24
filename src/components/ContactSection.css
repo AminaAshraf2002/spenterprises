@@ -7,9 +7,16 @@
 
 .contact-section__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 3rem;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(1.75rem, 3.5vw, 3.5rem);
   align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .contact-section__grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
 }
 
 .contact-section__left-title {
@@ -163,8 +170,9 @@
 }
 
 .contact-section__form-card {
-  padding: 2.25rem;
+  padding: clamp(1.25rem, 3.5vw, 2.25rem);
   box-shadow: var(--shadow-lg);
+  border-radius: clamp(16px, 3vw, 24px);
 }
 
 /* Success State */

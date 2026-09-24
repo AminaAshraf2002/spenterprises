@@ -475,7 +475,19 @@
 .import-export__categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 1.25rem;
+  gap: clamp(1rem, 2vw, 1.35rem);
+}
+
+@media (min-width: 1380px) {
+  .import-export__categories-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .import-export__categories-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .import-export__category-card {

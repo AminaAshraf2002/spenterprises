@@ -9,31 +9,32 @@
 .lanspice-store__banner {
   background: linear-gradient(135deg, #ffffff 0%, #f6f8f2 100%);
   border: 1.5px solid var(--color-primary-border);
-  border-radius: 24px;
-  padding: 1.75rem 2.5rem;
+  border-radius: clamp(16px, 3vw, 24px);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
   margin-top: 1.5rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
   box-shadow: 0 10px 30px rgba(45, 68, 38, 0.08);
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
   position: relative;
-  overflow: visible; /* lets mockup overlap outside card */
+  overflow: visible;
 }
 
 @media (max-width: 1200px) {
   .lanspice-store__mockup-link {
-    width: 125%;
-    margin-right: -3.5rem;
+    width: 100% !important;
+    margin: 0 auto !important;
+    max-width: 520px;
   }
 }
 
 @media (max-width: 991px) {
   .lanspice-store__banner {
     grid-template-columns: 1fr;
-    padding: 2rem 1.5rem;
-    gap: 2rem;
+    padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 2.5vw, 1.5rem);
+    gap: 1.75rem;
     overflow: hidden;
   }
 
@@ -42,9 +43,9 @@
   }
 
   .lanspice-store__mockup-link {
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
+    width: 100% !important;
+    max-width: 440px;
+    margin: 0 auto !important;
   }
 }
 
@@ -236,17 +237,30 @@
 .lanspice-store__products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.75rem;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
 }
 
-/* Strictly 3 columns (one row) on home page */
+@media (min-width: 1440px) {
+  .lanspice-store__products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Strictly 3 columns (one row) on home page desktop */
 .lanspice-store__products-grid--home {
   grid-template-columns: repeat(3, 1fr);
 }
 
 @media (max-width: 991px) {
   .lanspice-store__products-grid--home {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .lanspice-store__products-grid,
+  .lanspice-store__products-grid--home {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -393,4 +407,100 @@
 
 .lanspice-store__view-more-btn:hover .lanspice-store__view-more-icon {
   transform: translateX(3px);
+}
+
+/* ==========================================================================
+   BUY MORE ON LANSPICE.COM — Bottom CTA (shown on both home & store pages)
+   ========================================================================== */
+
+.lanspice-store__buy-more-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5rem;
+  gap: 0.6rem;
+}
+
+.lanspice-store__buy-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: linear-gradient(135deg, #3D4E37 0%, #5B6E4E 100%);
+  color: #ffffff;
+  padding: 0.52rem 1.2rem 0.52rem 0.7rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 14px rgba(61, 78, 55, 0.22), 0 1px 4px rgba(61, 78, 55, 0.1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.lanspice-store__buy-more-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.lanspice-store__buy-more-btn:hover {
+  background: linear-gradient(135deg, #2A3626 0%, #4C5E3F 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(61, 78, 55, 0.36), 0 4px 10px rgba(61, 78, 55, 0.18);
+  color: #ffffff;
+}
+
+.lanspice-store__buy-more-icon-wrap {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  flex-shrink: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.lanspice-store__buy-more-btn:hover .lanspice-store__buy-more-icon-wrap {
+  background: rgba(255, 255, 255, 0.28);
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.lanspice-store__buy-more-ext-icon {
+  font-size: 0.78rem;
+  opacity: 0.75;
+  margin-left: 0.15rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.lanspice-store__buy-more-btn:hover .lanspice-store__buy-more-ext-icon {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
+
+.lanspice-store__buy-more-note {
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .lanspice-store__buy-more-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.88rem;
+    padding: 0.85rem 1.5rem 0.85rem 1rem;
+  }
+  .lanspice-store__buy-more-wrap {
+    margin-top: 2rem;
+  }
 }
