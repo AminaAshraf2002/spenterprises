@@ -175,25 +175,25 @@ img, video, iframe, embed, object {
 
 /* -- Logo scale -- */
 @media (max-width: 1024px) {
-  .navbar__logo     { height: 110px !important; max-height: 110px !important; }
-  .navbar__logo-wrap{ margin-top: -20px !important; margin-bottom: -20px !important; }
+  .navbar__logo     { height: 125px !important; max-height: 125px !important; }
+  .navbar__logo-wrap{ margin-top: -26px !important; margin-bottom: -26px !important; }
 }
 @media (max-width: 768px) {
-  .navbar__logo      { height: 96px !important; max-height: 96px !important; }
-  .navbar__logo-wrap { margin-top: -18px !important; margin-bottom: -18px !important; }
-  .navbar__main      { min-height: 3.5rem !important; padding: 0.2rem 1rem !important; }
+  .navbar__logo      { height: 118px !important; max-height: 118px !important; }
+  .navbar__logo-wrap { margin-top: -24px !important; margin-bottom: -24px !important; }
+  .navbar__main      { min-height: 3.5rem !important; height: 3.5rem !important; padding: 0.2rem 1rem !important; }
 }
 @media (max-width: 480px) {
-  .navbar__logo      { height: 86px !important; max-height: 86px !important; }
-  .navbar__logo-wrap { margin-top: -16px !important; margin-bottom: -16px !important; }
-  .navbar__main      { min-height: 3.5rem !important; padding: 0.15rem 0.75rem !important; }
+  .navbar__logo      { height: 108px !important; max-height: 108px !important; }
+  .navbar__logo-wrap { margin-top: -22px !important; margin-bottom: -22px !important; }
+  .navbar__main      { min-height: 3.5rem !important; height: 3.5rem !important; padding: 0.15rem 0.75rem !important; }
   /* Icon-only quote button on very small screens */
   .navbar__quote-btn span { display: none; }
   .navbar__quote-btn      { padding: 0.6rem 0.75rem; min-width: 44px; min-height: 44px; }
 }
-@media (max-width: 320px) {
-  .navbar__logo { height: 74px !important; max-height: 74px !important; }
-  .navbar__logo-wrap { margin-top: -12px !important; margin-bottom: -12px !important; }
+@media (max-width: 375px) {
+  .navbar__logo      { height: 98px !important; max-height: 98px !important; }
+  .navbar__logo-wrap { margin-top: -18px !important; margin-bottom: -18px !important; }
 }
 
 /* -- Hamburger -- */
