@@ -30,7 +30,7 @@ export const COMPANY_INFO = {
   ],
   whatsapp: "+91 7090709042",
   whatsappLink: "https://wa.me/917090709042?text=Hello%20SP%20Enterprises,%20I%20would%20like%20to%20inquire%20about%20your%20farm%20produce%20and%20export%20options.",
-  email: "spe.sg.ind@gmail.com",
+  email: "sp.lanspice@gmail.com",
   socials: {
     facebook: "https://facebook.com",
     twitter: "https://x.com",
